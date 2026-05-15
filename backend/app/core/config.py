@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     AWS_REGION: str = "us-east-1"
     S3_BUCKET_NAME: str = "hiresmart-resumes"
 
-    ALLOWED_ORIGINS: List[str] = ["http://localhost:3000"]
+    ALLOWED_ORIGINS: List[str] = ["https://hiresmart-seven.vercel.app"]
 
     class Config:
         env_file = ".env"
