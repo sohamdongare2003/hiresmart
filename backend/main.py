@@ -7,7 +7,7 @@ from app.api.routes import auth, jobs, candidates, matching, applications
 
 app = FastAPI(title="HireSmart API", version="1.0.0", docs_url="/docs")
 
-app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins_list,
+app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins,
                    allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 uploads_dir = Path(settings.LOCAL_UPLOAD_DIR)
