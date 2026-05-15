@@ -21,6 +21,6 @@ app.include_router(matching.router)
 app.include_router(applications.router)
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {"status": "ok", "app": settings.APP_NAME}
