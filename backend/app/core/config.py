@@ -22,6 +22,7 @@ class Settings(BaseSettings):
         return f"mysql+pymysql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
     GEMINI_API_KEY: str = ""
+
     STORAGE_TYPE: str = "local"
     LOCAL_UPLOAD_DIR: str = "uploads"
 
@@ -30,15 +31,10 @@ class Settings(BaseSettings):
     AWS_REGION: str = "us-east-1"
     S3_BUCKET_NAME: str = "hiresmart-resumes"
 
-    ALLOWED_ORIGINS: str = "http://localhost:3000"
-    ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://hiresmart-seven.vercel.app"
+    ALLOWED_ORIGINS: List[str] = [
+        "http://localhost:3000",
+        "https://hiresmart-seven.vercel.app"
     ]
-
-    @property
-    def allowed_origins_list(self) -> List[str]:
-        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",")]
 
     class Config:
         env_file = ".env"
