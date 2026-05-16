@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     AWS_REGION: str = "us-east-1"
     S3_BUCKET_NAME: str = "hiresmart-resumes"
 
-    ALLOWED_ORIGINS: str = "https://hiresmart-seven.vercel.app,http://localhost:3000"
+    ALLOWED_ORIGINS: str = "https://hiresmart-seven.vercel.app,http://localhost:3000,hiresmart-431zap7pc-sohamdongare2003s-projects.vercel.app"
 
     @property
     def allowed_origins_list(self):
