@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
-    DB_HOST: str = "localhost"
+    DB_HOST: str = "monorail.proxy.rlwy.net"
     DB_PORT: int = 3306
     DB_USER: str = "root"
     DB_PASSWORD: str = "Mysql12"
