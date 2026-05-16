@@ -31,6 +31,10 @@ class Settings(BaseSettings):
     S3_BUCKET_NAME: str = "hiresmart-resumes"
 
     ALLOWED_ORIGINS: str = "http://localhost:3000"
+    ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://hiresmart-seven.vercel.app"
+    ]
 
     @property
     def allowed_origins_list(self) -> List[str]:
