@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000' })
+const api = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'https://hiresmart-backend-xvu5.onrender.com' })
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('hs_token')
