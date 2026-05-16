@@ -31,10 +31,11 @@ class Settings(BaseSettings):
     AWS_REGION: str = "us-east-1"
     S3_BUCKET_NAME: str = "hiresmart-resumes"
 
-    ALLOWED_ORIGINS: List[str] = [
-        "http://localhost:3000",
-        "https://hiresmart-seven.vercel.app"
-    ]
+    ALLOWED_ORIGINS: str = "http://localhost:3000,https://hiresmart-seven.vercel.app"
+
+    @property
+    def allowed_origins_list(self):
+        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",")]
 
     class Config:
         env_file = ".env"
