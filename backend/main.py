@@ -8,7 +8,9 @@ from app.api.routes import auth, jobs, candidates, matching, applications
 app = FastAPI(title="HireSmart API", version="1.0.0", docs_url="/docs")
 
 allowed_origins = [
-    "https://hiresmart-seven.vercel.app",
+    "https://hiresmart-seven.vercel.app/",
+    "https://hiresmart-git-main-sohamdongare2003s-projects.vercel.app",
+    "https://hiresmart-22hu9sx9j-sohamdongare2003s-projects.vercel.app",
     "http://localhost:3000",
 ]
 
