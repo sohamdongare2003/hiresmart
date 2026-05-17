@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from app.core.config import settings
 
 engine = create_engine(
-    settings.DATABASE_URL=mysql+pymysql://root:Mysql12@yamabiko.proxy.rlwy.net:11399/hiresmart,
+    settings.DATABASE_URL,
     pool_pre_ping=True,
     pool_size=10,
     max_overflow=20,
